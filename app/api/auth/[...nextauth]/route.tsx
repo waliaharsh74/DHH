@@ -1,8 +1,7 @@
 import NextAuth from "next-auth";
-import CredentialsProvider from 'next-auth/providers/credentials';
 import SpotifyProvider from "next-auth/providers/spotify";
 
-const authOptions = {
+export const authOptions = {
 
     providers: [
 
@@ -12,7 +11,11 @@ const authOptions = {
             clientSecret: process.env.SPOTIFY_CLIENT_SECRET!
         })
     ],
-    secret: process.env.NEXTAUTH_SECRET!
+    secret: process.env.NEXTAUTH_SECRET!,
+    pages: {
+        signIn: '/auth',
+        signOut: '/auth',
+    }
 
 }
 const handler = NextAuth(authOptions)
