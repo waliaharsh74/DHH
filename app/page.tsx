@@ -11,20 +11,19 @@ export default async function Home() {
 
   return (
 
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      {JSON.stringify(session)}
-      <LoginBtn />
+    <div className="">
+
       <main id="main-content" className="flex-1 relative ">
 
 
         <div
           id="6b287909-c0a4-44a1-9c92-4ebfe6566d71"
           data-section_id="6b287909-c0a4-44a1-9c92-4ebfe6566d71"
-          className="page_sectionHighlight__ahPeD sectionCode"
+          className=" sectionCode"
         >
           <>
             <div id="root">
-              <nav id="navbar" className="bg-neutral-900 fixed w-full z-50">
+              <nav id="navbar" className="bg-neutral-900  w-full z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
@@ -38,7 +37,7 @@ export default async function Home() {
                         <a href="#" className="text-gray-300 hover:text-purple-500 transition-colors duration-300">Discover</a>
                         <a href="#" className="text-gray-300 hover:text-purple-500 transition-colors duration-300">Artists</a>
                         <a href="#" className="text-gray-300 hover:text-purple-500 transition-colors duration-300">Trivia</a>
-                        <button className="bg-purple-500 text-white px-6 py-2 rounded-full hover:bg-purple-600 transition-colors duration-300 animate__animated animate__pulse animate__infinite">Join Now</button>
+                        <button className="bg-purple-500 text-white px-6 py-2 rounded-full hover:bg-purple-600 transition-colors duration-300 animate__animated animate__pulse animate__infinite">{session?.user?.name} </button>
                       </div>
                     </div>
                     <div className="md:hidden">
